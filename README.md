@@ -10,4 +10,6 @@ run in command line
 `python main.py`
 
 # Results
-Coming soon.
+More results soon.
+<img width="860" alt="image" src="https://github.com/bryankappa/TransferaseML-Benchmark/assets/90988298/d9a7fde8-90b4-4533-b0f4-614cad6437fa">
+

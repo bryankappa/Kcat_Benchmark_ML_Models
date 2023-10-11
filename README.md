@@ -10,4 +10,5 @@ run in command line
 `python main.py`
 
 # Results
-More results soon.
+<img width="305" alt="image" src="https://github.com/bryankappa/TransferaseML-Benchmark/assets/90988298/31d01bc0-ec81-419b-a4f6-264645354ea4">
+

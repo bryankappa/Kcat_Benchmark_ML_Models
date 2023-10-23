@@ -46,7 +46,39 @@ class SVMtuner:
         epsilon = [0.01, 0.1, 1]
         kernel = ['sigmoid', 'linear', 'rbf', 'poly']
 
+        # lets define the dictionary
+        params = {'C' : C,
+                'epsilon' : epsilon,
+                'kernel' : kernel}
+        
+        svr_random = RandomizedSearchCV(estimator= self.svr.regressor,
+                                        param_distributions=params,
+                                        n_iter = 10,
+                                        cv = 3,
+                                        verbose =2,
+                                        random_state=1,
+                                        n_jobs=-1)
+        
+        svr_random.fit(X, y)
+        self.best_params_ = svr_random.best_params_
+        return self.best_params_
 
+    def get_best_params(self):
+        if self.best_params_ is None:
+            raise ValueError("Fit the model first")
+        return self.best_params_
+
+# Example of how to use it
+# model = CustomSVR(C=1.0, kernel='rbf')
+# model.fit(X_train, y_train)
+# mse = model.evaluate(X_test, y_test)
+# print(f"Mean Squared Error: {mse}")
+
+# tuner = SVRTuner(model)
+# best_params = tuner.fit(X_train, y_train)
+# print(f"Best parameters: {best_params}")
+
+# model.set_params(**best_params)
 
 
 

@@ -18,22 +18,12 @@ y = np.log10(data['Kcat'])
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 #run the model that is available: CustomRandomForestRegressor, customSVMregressor, and customXGBregressor
-# model = customXGBregressor(verbose=2)
-# model.fit(X_train, y_train)
-# y_pred = model.predict(X_test)
+model = customSVMregressor(kernel = 'rbf', epsilon = 1, C = 10) # you can add the specific tuning parameters needed.
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+print(evaluate_model(y_test, y_pred))
 
-# evaluate_model(y_test, y_pred)
-
-rf = RandomForestRegressor()
-
-# Initialize the tuner class
-tuner = RandomForestTuner(rf)
-
-# Fit the data and search for the best hyperparameters
-best_params = tuner.fit(X_train, y_train)
-
-# Retrieve the best parameters
-print("Best parameters found: ", best_params)
-
-# Or you could use the method to get the best parameters
-print("Best parameters found: ", tuner.get_best_params())
+# this is for tuning 
+# tuner = SVRTuner(model)
+# best_params = tuner.fit(X_train, y_train)
+# print(f"Best parameters: {best_params}")

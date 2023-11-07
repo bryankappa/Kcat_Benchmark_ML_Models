@@ -13,5 +13,4 @@ run in command line
 `python main.py`
 
 # Results
-<img width="305" alt="image" src="https://github.com/bryankappa/TransferaseML-Benchmark/assets/90988298/31d01bc0-ec81-419b-a4f6-264645354ea4">
-
+<img width="599" alt="image" src="https://github.com/bryankappa/TransferaseML-Benchmark/assets/90988298/b4bc9521-8da7-4d0c-8f3c-bf018e2dbe47">

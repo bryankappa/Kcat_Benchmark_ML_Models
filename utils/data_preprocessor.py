@@ -8,6 +8,7 @@ from sklearn.decomposition import PCA as sklearnPCA
 from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors
 import os
+import selfies as sf
 
 def load_data():
     preprocessor = DataPreprocessor(r'C:\Users\Gilbert\Documents\BCB_Research\Kcat_Benchmark_ML_Models\Data\kcat_transferase.csv')
@@ -39,7 +40,12 @@ class DataPreprocessor:
     def apply_log_transform(self, data):
         data["Kcat"] = np.log10(data["Kcat"])
         return data
-
+    
+    def apply_SELFIES_transform(self, data):
+        data["selfies"] = data["smiles"].apply(sf.encoder)  # Corrected column name
+        return data
+    
+    
 
 class PCA:
     def __init__(self, csv_file, n_components=None):

@@ -13,4 +13,5 @@ run in command line
 `python main.py`
 
 # Results
+Amino Acid one hot encoding Tranferase, no hyperparameter tuning, 80:20 split
 <img width="599" alt="image" src="https://github.com/bryankappa/TransferaseML-Benchmark/assets/90988298/b4bc9521-8da7-4d0c-8f3c-bf018e2dbe47">

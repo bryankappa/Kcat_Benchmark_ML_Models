@@ -33,18 +33,17 @@ class DataPreprocessor:
             else:
                 return None
 
-        data["Molecular_Weight"] = data["Compound"].apply(molecular_weight)
+        data["Molecular_Weight"] = data["smiles"].apply(molecular_weight)
         return data
 
     #applying log to the data
     def apply_log_transform(self, data):
         data["Kcat"] = np.log10(data["Kcat"])
         return data
-    
+
     def apply_SELFIES_transform(self, data):
         data["selfies"] = data["smiles"].apply(sf.encoder)  # Corrected column name
         return data
-    
     
 
 class PCA:

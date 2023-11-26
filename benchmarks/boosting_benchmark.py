@@ -64,6 +64,23 @@ class customCatBoostRegressor:
         """Set new parameters for the regressor."""
         self.regressor.set_params(**params)
 
+# setting up the hyperparamter tuning for Boosting models.
+
+# class BoostTuner:
+
+#     def __init__(self, boost):
+#         self.boost = boost
+#         self.best_params_= None # set to none to be able to add to the best parameters.
+    
+#     def fit(self, X, y):
+#         self.best_params_ = 
+
+        
+
+
+    
+
+
     
 
 

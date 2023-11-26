@@ -33,7 +33,7 @@ class customSVMregressor:
         """Set new parameters for the regressor."""
         self.regressor.set_params(**params)
 
-class SVMtuner:
+class SVRTuner:
 # create a isntance class
     def __init__(self, svr):
         self.svr = svr

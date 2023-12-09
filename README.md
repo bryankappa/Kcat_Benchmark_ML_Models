@@ -9,7 +9,7 @@ A machine learning based algorithms benchmark for the reductase substrate spectr
 `pip install RDKit scikit-learn selfies numpy pandas`
 
 # Running the Machine learning pipeline
-run in command line
+run in command line and change the pipeline that is needed.
 
 `python main.py`
 
